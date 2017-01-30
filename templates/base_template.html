@@ -33,7 +33,7 @@
 </nav>
 <div class="container">
     {% block heading %}
-    <h1>{% block page_heading %}Base{% endblock %}</h1>
+    {% block page_heading %}Base{% endblock %}
     {% endblock %}
     <br>
     {% block content %}{% endblock %}

@@ -1,10 +1,14 @@
 {% extends "base_template.html" %}
+{% block page_heading %}
+<div>
+    <h3>{{name}}</h3>
+    <span class="label label-default">{{ topic }}</span>
+</div>
+{% endblock %}
 {% block title %}{{name}}{% endblock %}
-{% block page_heading %}{{name}}{% endblock %}
 {% block heading %}
-    {{super()}}
+{{super()}}
 {% endblock %}
 {% block content %}
-    <h4>{{topic}}</h4>
-    {{html | safe}}
+{{html | safe}}
 {% endblock %}
