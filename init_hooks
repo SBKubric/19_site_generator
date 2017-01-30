@@ -1,0 +1,5 @@
+#!/bin/sh
+FILEPATHS=$PWD"/hooks/*"
+for filepath in $FILEPATHS; do
+	ln -f -s $filepath $PWD"/.git/hooks/"$(basename $filepath);
+done
