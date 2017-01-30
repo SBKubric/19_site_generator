@@ -48,6 +48,12 @@ def get_file_path(file_url):
     return os.path.normpath('{}{}'.format(BASE_DIR, file_url))
 
 
+def get_topic_name(topic_slug, topics):
+    for topic in topics:
+        if topic['slug'] == topic_slug:
+            return topic['title']
+
+
 def generate_html_articles(template, config):
 
     for article in config['articles']:
@@ -56,9 +62,10 @@ def generate_html_articles(template, config):
         dir_path = get_dir_path(html_path)
         check_dir(dir_path)
         article_html = get_html_from_markdown(article_path)
+        topic_name = get_topic_name(article['topic'], config['topics'])
         rendering_args = {
             'name': article['title'],
-            'topic': article['topic'],
+            'topic': topic_name,
             'index_path': '../../index.html',
             'html': article_html,
         }
