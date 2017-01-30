@@ -56,26 +56,26 @@ def generate_html_articles(template, config):
         dir_path = get_dir_path(html_path)
         check_dir(dir_path)
         article_html = get_html_from_markdown(article_path)
-        data = {
+        rendering_args = {
             'name': article['title'],
             'topic': article['topic'],
             'index_path': '../../index.html',
             'html': article_html,
         }
         with open(html_path, mode='w', encoding='utf-8') as html_source:
-            html_source.write(template.render(data))
+            html_source.write(template.render(rendering_args))
 
 
 def generate_index_file(template, config):
     template.globals['make_html_path'] = make_html_url
-    data = {
+    rendering_data = {
         'name': 'Содержание',
         'topics': config['topics'],
         'index_path': INDEX_PAGE_PATH,
         'articles': config['articles'],
     }
     with open(get_file_path(INDEX_PAGE_PATH), mode='w', encoding='utf-8') as html_source:
-        html_source.write(template.render(data))
+        html_source.write(template.render(rendering_data))
 
 
 def load_config(config_file_path):
