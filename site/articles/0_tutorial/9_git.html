@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %} - Devman's Encyclopedia</title>
+    <title>Гит и Гитхаб - Devman's Encyclopedia</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-            <a class="navbar-brand" href={{ index_path }}>Encyclopedia</a>
+            <a class="navbar-brand" href=../../index.html>Encyclopedia</a>
         </div>
 
         <div class="nav">
@@ -30,11 +30,21 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    {% block heading %}
-    <h1>{% block page_heading %}Base{% endblock %}</h1>
-    {% endblock %}
+    
+    
+    <h1>Гит и Гитхаб</h1>
+    
+
     <br>
-    {% block content %}{% endblock %}
+    
+    <h4>tutorial</h4>
+    <p>Гит – штука для управления кодом. Вместо чтения рекомендую начать с <a href="https://try.github.io">туториала на Гитхабе</a> (en).
+Он займёт 15 минут и даст представление о том, что это за зверь и как им пользоваться.</p>
+<p>Следующий шаг – <a href="https://githowto.com/ru">туториал на githowto.com</a>, он на русском и куда длиннее.</p>
+<p>Гитхаб – это что-то типа Фейсбука для программистов. Код вместо постов, баги вместо котиков. Идиллия.
+Чтобы познакомиться с ним ближе, рекомендую выполнить их <a href="https://guides.github.com/activities/hello-world/">Hello World</a>.
+После можно пройти <a href="https://guides.github.com/">остальные руководства от Гитхаба</a>, это очень полезные навыки для разработчика.</p>
+
     <br>
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
