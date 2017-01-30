@@ -1,0 +1,10 @@
+{% extends "base_template.html" %}
+{% block title %}{{name}}{% endblock %}
+{% block page_heading %}{{name}}{% endblock %}
+{% block heading %}
+    {{super()}}
+{% endblock %}
+{% block content %}
+    <h4>{{topic}}</h4>
+    {{html | safe}}
+{% endblock %}

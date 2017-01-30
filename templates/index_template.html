@@ -1,0 +1,26 @@
+{% extends "base_template.html" %}
+{% block title %}{{name}}{% endblock %}
+{% block page_heading %}{{name}}{% endblock %}
+{% block heading %}
+{{super()}}
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        {% for topic in topics %}
+        <div class="col-md-3">
+            <div class="articles_title page-header">
+                <h4 class="text-center">{{topic.title}}</h4>
+            </div>
+            <ul>
+                {% for article in articles %}
+                {% if article.topic == topic.slug %}
+                <li><a href='{{ make_html_path(article["source"])}}'>{{ article["title"]}}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

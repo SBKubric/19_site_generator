@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %} - Devman's Encyclopedia</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encyclopedia of Knowledge for Python Junior Web Developer"
+    <meta name="author" content="SBKubric">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+        .container {
+            /*max-width: 960px;*/
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href={{ index_path }}>Encyclopedia</a>
+        </div>
+
+        <div class="nav">
+            <ul class="nav navbar-right">
+                <li><a href="https://devman.org" content="Devman.org"><img
+                        src="https://devman.org/assets/images/devman.png"></a></li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    {% block heading %}
+    <h1>{% block page_heading %}Base{% endblock %}</h1>
+    {% endblock %}
+    <br>
+    {% block content %}{% endblock %}
+    <br>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="col-sm-12 text-center navbar-text">
+        Made by <a href="https://sbkubric.github.io">SBKubric</a>.
+        Project of <a href="https://devman.org">Devman.org</a>.
+    </div>
+</nav>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
