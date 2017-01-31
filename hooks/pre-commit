@@ -1,5 +1,8 @@
 #!/bin/sh
 if [[ $(git st -s) ]]; then
+        git fetch upstream;
+        git co master;
+        git merge upstream/master;
         make generate;
         git add site;
 fi
