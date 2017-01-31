@@ -33,7 +33,7 @@ def get_templates():
 
 def make_html_url(source_path):
     html_path = '{}{}.html'.format(HTML_ARTICLE_DIR, source_path.split('.')[0])
-    return url_normalize(html_path)
+    return '.{}'.format(url_normalize(html_path)[7:])
 
 
 def get_html_from_markdown(path):
