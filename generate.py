@@ -39,11 +39,6 @@ def get_html_from_markdown(path):
         return markdown(md_handler.read(), extensions=['codehilite', 'fenced_code'])
 
 
-def get_dir_path(path):
-    dirs = path.split('/')[:-1]
-    return '/'.join(dirs)
-
-
 def get_file_path(file_url):
     return os.path.normpath('{}{}'.format(BASE_DIR, file_url))
 
@@ -59,7 +54,7 @@ def generate_html_articles(template, config):
     for article in config['articles']:
         article_path = './articles/{}'.format(article['source'])
         html_path = get_file_path(make_html_url(article['source']))
-        dir_path = get_dir_path(html_path)
+        dir_path = os.path.dirname(html_path)
         check_dir(dir_path)
         article_html = get_html_from_markdown(article_path)
         topic_name = get_topic_name(article['topic'], config['topics'])
