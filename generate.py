@@ -3,7 +3,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import os
 import argparse
 import json
-import urlnorm
+from url_normalize import url_normalize
+
 
 BASE_DIR = './site/'
 CONFIG_PATH = './config.json'
@@ -32,7 +33,7 @@ def get_templates():
 
 def make_html_url(source_path):
     html_path = '{}{}.html'.format(HTML_ARTICLE_DIR, source_path.split('.')[0])
-    return urlnorm.norm(html_path)
+    return url_normalize(html_path)
 
 
 def get_html_from_markdown(path):
