@@ -2,9 +2,9 @@
 
 ## Description
 
-This project proudly presents a uniue collection of articles written by [Melevir](https://github.com/Melevir).
-It is a [static site](https://sbkubric.github.io/19_site_generator/site/) that
-represent a [Encyclopedia of Devman](https://devman.org/encyclopedia/).
+This project proudly represents a uniue collection of articles written by
+[Melevir](https://github.com/Melevir) - [Encyclopedia of Devman](https://devman.org/encyclopedia/).
+It is a [static site](https://sbkubric.github.io/19_site_generator/site/), generated with Jinja2 Template Engine.
 
 The source files are written in Markdown and are separated by topics in different folders.
 The structure of the static site is generated from JSON file `config.json`.
@@ -16,7 +16,8 @@ trying to commit updated content.
 git clone git@github.com:SBKubric/19_site_generator.git
 ```
 
-To initiate git hooks, run `./init_hooks`.
+To initiate git hooks, run `./init_hooks` and `./configure_upstream
+`. Tha last is needed for fetching data from parent repo.
 
 ### Configuration
 
