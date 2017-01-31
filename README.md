@@ -2,7 +2,7 @@
 
 ## Description
 
-This project proudly presents a uniue collection of articles written by @ilebedev.
+This project proudly presents a uniue collection of articles written by [Melevir](https://github.com/Melevir).
 It is a [static site](https://sbkubric.github.io/19_site_generator/site/) that
 represent a [Encyclopedia of Devman](https://devman.org/encyclopedia/).
 
